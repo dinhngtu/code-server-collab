@@ -30,7 +30,7 @@ const simulatedCodeServer_1 = require("./simulatedCodeServer");
 console.log("Mock server starting");
 mockableApis_1.MockableApis.codeServer = new simulatedCodeServer_1.SimulatedCodeServer();
 const app = express_1.default();
-const port = 8180;
+const port = 8080;
 const server = http.createServer(app);
 const plugin = new collabPlugin_1.CollabPlugin();
 plugin.init({
@@ -43,6 +43,7 @@ wsApp.use(plugin.routerPath, plugin.wsRouter().router);
 //code copied from code-server
 server.on("upgrade", (req, socket, head) => {
     socket.pause();
+    console.log("Handle upgrade");
     req.ws = socket;
     req.head = head;
     req._ws_handled = false;
