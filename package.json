@@ -24,7 +24,7 @@
     "@types/http-proxy": "^1.17.7",
     "@types/node": "^16.0.0",
     "@types/ws": "^7.4.6",
-    "code-server": "4.9.0",
+    "code-server": "4.11.0",
     "express": "^4.17.1",
     "tslint": "^6.1.3"
   },
